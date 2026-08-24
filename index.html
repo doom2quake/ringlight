@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ringlight lets you watch a browser agent trace suspicious money across a live map, then asks you before freezing the linked accounts.">
+    <meta name="theme-color" content="#050811">
+    <title>Ringlight | Follow the money</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body data-case-state="live">
+    <a class="skip-link" href="#case-console">Skip to the case console</a>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="aurora aurora-one" aria-hidden="true"></div>
+    <div class="aurora aurora-two" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#case-console" aria-label="Ringlight home">
+        <span class="brand-eye" aria-hidden="true"><i></i><b></b></span>
+        <span><strong>RINGLIGHT</strong><small>live money map</small></span>
+      </a>
+      <div class="case-live">
+        <i></i>
+        <span>CASE <b data-case-id>RL-2408</b></span>
+        <span class="divider"></span>
+        <time datetime="2026-08-24T19:42:00Z" data-case-clock>19:42:00 UTC</time>
+      </div>
+      <div class="host-status" aria-live="polite">
+        <span class="webmcp-glyph" aria-hidden="true">⌁</span>
+        <strong data-tool-count>0</strong>
+        <span>site tools</span>
+        <b data-host-chip>connecting</b>
+      </div>
+    </header>
+
+    <main id="case-console" class="shell">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="kicker"><span>LIVE FRAUD TRACE</span><i></i><span data-source-label>SEEDED EXERCISE</span></div>
+          <h1 id="hero-title">Follow the money.<br><em>See the hidden network.</em></h1>
+          <p class="tagline">Watch your browser agent trace a <span class="term"><button type="button" aria-describedby="term-ring-tip">fraud ring</button><span role="tooltip" id="term-ring-tip">A group of linked accounts used to move money through a loop and hide where it came from.</span></span> across a live money map, and freeze it with one click.</p>
+        </div>
+        <div class="hero-action-stack">
+          <div class="prompt-chip" aria-label="Exact ChatGPT browser prompt">
+            <span>TYPE THIS IN CHATGPT</span>
+            <q data-judge-prompt>Trace the suspicious transfer tx-flag-001 from account acct-acme-004. Follow the money, show the linked accounts on the map, explain the total at risk, and pause before freezing anything.</q>
+            <button type="button" data-copy-prompt aria-label="Copy the judge prompt">COPY</button>
+          </div>
+          <div class="hero-buttons">
+            <button class="button button-primary" type="button" data-run-demo>
+              <span class="button-core" aria-hidden="true"></span>
+              Run full investigation
+              <kbd>R</kbd>
+            </button>
+            <button class="button button-ghost" type="button" data-reset-case>Replay from start</button>
+            <button class="icon-button" type="button" data-open-help aria-label="Open help">?</button>
+          </div>
+          <button class="data-secondary" type="button" data-open-data>or load your own transfers (CSV/JSON)</button>
+        </div>
+      </section>
+
+      <section class="plain-explainer" aria-label="What is happening">
+        <strong>Here is what is happening</strong>
+        <span><b>1</b> $187,500 leaves ACME-004.</span>
+        <span><b>2</b> The browser follows every hop and lights up the map.</span>
+        <span><b>3</b> You approve the simulated freeze.</span>
+        <span><b>4</b> Replay shows every step without freezing twice.</span>
+      </section>
+
+      <nav class="plain-glossary" aria-label="Plain-language definitions">
+        <span>QUICK DEFINITIONS</span>
+        <span class="term"><button type="button" aria-describedby="term-mule-tip">middle account</button><span role="tooltip" id="term-mule-tip">Sometimes called a mule: an account used to receive and quickly pass on suspicious money.</span></span>
+        <span class="term"><button type="button" aria-describedby="term-exposure-tip">money at risk</button><span role="tooltip" id="term-exposure-tip">Sometimes called exposure: money that is still moving and may still be stopped.</span></span>
+        <span class="term"><button type="button" aria-describedby="term-report-tip">case report</button><span role="tooltip" id="term-report-tip">A local draft of a suspicious activity report, often shortened to SAR. Nothing is sent.</span></span>
+      </nav>
+
+      <section class="resolved-banner" data-resolved-banner hidden aria-live="assertive">
+        <span class="resolved-mark" aria-hidden="true"><i></i></span>
+        <div>
+          <small>MONEY STOPPED</small>
+          <strong><b data-resolved-count>14</b> accounts frozen. <b data-resolved-money>$665.5K</b> in outgoing transfers stopped.</strong>
+        </div>
+        <div class="resolved-proof"><span>CASE FILED</span><b data-final-receipts>13 RECEIPTS</b></div>
+      </section>
+
+      <section class="metric-ribbon" aria-label="Case summary">
+        <article class="metric metric-alert">
+          <span>Flagged transfer</span>
+          <strong data-flagged-amount>$187.5K</strong>
+          <small data-flagged-route>acct-acme-004 → mule-01</small>
+        </article>
+        <article class="metric">
+          <span>Accounts visible</span>
+          <strong data-ring-count>7</strong>
+          <small data-ring-detail>starting accounts visible</small>
+        </article>
+        <article class="metric metric-money">
+          <span>Money traced</span>
+          <strong data-gross-flow>$187.5K</strong>
+          <small data-exposure-detail>flagged amount loaded</small>
+        </article>
+        <article class="metric metric-risk">
+          <span>Still moving</span>
+          <strong data-pending-risk>$665.5K</strong>
+          <small data-pending-caption>7 outgoing transfers can still be stopped</small>
+        </article>
+        <article class="metric">
+          <span>Trace status</span>
+          <strong data-confidence>READY</strong>
+          <small>one button starts all 13 calls</small>
+        </article>
+      </section>
+
+      <section class="command-deck">
+        <aside class="panel investigation-panel" aria-labelledby="investigation-title">
+          <header class="panel-head compact">
+            <div><span class="eyebrow">INVESTIGATION</span><h2 id="investigation-title">What the browser will do</h2></div>
+            <span class="step-counter"><b data-completed-steps>0</b>/13</span>
+          </header>
+          <ol class="tool-ladder" data-tool-ladder>
+            <li data-tool-step="traceFlow"><i>01</i><span><b>Trace the transfer</b><small>traceFlow</small></span><em>ready</em></li>
+            <li data-tool-step="expandAccount"><i>02</i><span><b>Open linked accounts</b><small>expandAccount × 4</small></span><em>queued</em></li>
+            <li data-tool-step="scoreRisk"><i>03</i><span><b>Score unusual behavior</b><small>scoreRisk</small></span><em>queued</em></li>
+            <li data-tool-step="detectRing"><i>04</i><span><b>Find the closed loop</b><small>detectRing</small></span><em>queued</em></li>
+            <li data-tool-step="dollariseExposure"><i>05</i><span><b>Calculate money at risk</b><small>dollariseExposure</small></span><em>queued</em></li>
+            <li data-tool-step="buildCaseTimeline"><i>06</i><span><b>Build the case</b><small>buildCaseTimeline</small></span><em>queued</em></li>
+            <li class="human-step" data-tool-step="freezeAccounts"><i>07</i><span><b>Ask you before freezing</b><small>freezeAccounts</small></span><em>your approval</em></li>
+            <li data-tool-step="fileSARreport"><i>08</i><span><b>Draft the case report</b><small>fileSARreport</small></span><em>queued</em></li>
+            <li class="human-step" data-tool-step="notifyBank"><i>09</i><span><b>Ask before handoff</b><small>notifyBank</small></span><em>your approval</em></li>
+            <li data-tool-step="replayInvestigation"><i>10</i><span><b>Replay every step</b><small>replayInvestigation</small></span><em>queued</em></li>
+          </ol>
+          <div class="case-source">
+            <i aria-hidden="true">✓</i>
+            <p><strong>Safe seeded exercise</strong><span>Invented accounts. Synthetic dollars. Zero network requests.</span></p>
+          </div>
+        </aside>
+
+        <article class="panel graph-panel" aria-labelledby="graph-title">
+          <header class="graph-head">
+            <div>
+              <span class="eyebrow">LIVE MONEY FLOW</span>
+              <h2 id="graph-title">Where the money moves</h2>
+            </div>
+            <div class="graph-legend" aria-label="Graph legend">
+              <span><i class="legend-origin"></i>start</span>
+              <span><i class="legend-mule"></i>linked</span>
+              <span><i class="legend-exit"></i>destination</span>
+              <span><i class="legend-frozen"></i>frozen</span>
+            </div>
+          </header>
+
+          <div class="graph-stage" data-graph-stage>
+            <div class="graph-grid" aria-hidden="true"></div>
+            <div class="graph-empty is-hidden" data-graph-empty>
+              <span class="scan-orbit" aria-hidden="true"><i></i><b></b></span>
+              <strong>ONE TRANSFER. UNKNOWN NETWORK.</strong>
+              <p>The first trace will expose the next hop.</p>
+            </div>
+            <svg class="money-graph" data-money-graph viewBox="0 0 1000 590" role="img" aria-labelledby="graph-svg-title graph-svg-desc">
+              <title id="graph-svg-title">Synthetic money flow graph</title>
+              <desc id="graph-svg-desc">A force-directed map that reveals fourteen linked accounts and their transfers during the investigation.</desc>
+              <defs>
+                <marker id="arrow-muted" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z"></path></marker>
+                <marker id="arrow-hot" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z"></path></marker>
+                <filter id="node-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5" result="blur"></feGaussianBlur><feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter>
+              </defs>
+              <g data-graph-edges></g>
+              <g data-graph-nodes></g>
+            </svg>
+            <div class="active-call" data-active-call hidden>
+              <span class="call-pulse"></span>
+              <div><small>BROWSER CALLING</small><strong data-active-tool>traceFlow</strong></div>
+              <code data-active-args>{...}</code>
+            </div>
+            <div class="ring-verdict" data-ring-verdict hidden>
+              <span class="verdict-sigil" aria-hidden="true">◎</span>
+              <div><small>LINKED NETWORK FOUND</small><strong><b data-verdict-count>14</b> accounts · <b data-verdict-money>$2.3M</b></strong><span data-verdict-confidence>97% link confidence</span></div>
+            </div>
+          </div>
+
+          <div class="time-machine">
+            <button class="scrub-play" type="button" data-play-replay disabled aria-label="Replay investigation">▶</button>
+            <div class="scrub-track">
+              <div class="scrub-labels"><span>INVESTIGATION REPLAY</span><b data-scrub-label>LIVE</b></div>
+              <input data-time-scrubber type="range" min="0" max="0" value="0" disabled aria-label="Investigation time scrubber">
+              <div class="scrub-ticks" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+            <time data-replay-time>19:42:00</time>
+          </div>
+        </article>
+
+        <aside class="right-rail">
+          <article class="panel activity-panel" aria-labelledby="activity-title">
+            <header class="panel-head compact">
+              <div><span class="eyebrow">LIVE TOOL ACTIVITY</span><h2 id="activity-title">Browser moves</h2></div>
+              <span class="live-chip"><i></i>LIVE</span>
+            </header>
+            <div class="activity-feed" data-activity-feed aria-live="polite">
+              <div class="activity-item primed"><i>✓</i><div><strong>Case ready <code>RL-2408</code></strong><p>$187.5K from acct-acme-004 is ready to trace.</p><code>seeded synthetic exercise · no network request</code></div></div>
+            </div>
+          </article>
+
+          <article class="panel provenance-panel" aria-labelledby="provenance-title">
+            <header class="panel-head compact">
+              <div><span class="eyebrow">CALL RECEIPTS</span><h2 id="provenance-title">Proof of every move</h2></div>
+              <button class="rail-export" type="button" data-export-rail disabled>EXPORT</button>
+            </header>
+            <div class="provenance-rail" data-provenance-rail aria-live="polite">
+              <div class="rail-line" aria-hidden="true"></div>
+              <div class="empty-state small"><strong>No call receipts yet</strong><p>Each tool name, input, result fingerprint, time, and approval will appear here.</p></div>
+            </div>
+          </article>
+        </aside>
+      </section>
+
+      <section class="evidence-grid">
+        <article class="panel timeline-panel" aria-labelledby="timeline-title">
+          <header class="panel-head">
+            <div><span class="eyebrow">CASE TIMELINE</span><h2 id="timeline-title">Nine minutes from flag to containment</h2></div>
+            <span class="source-badge">LOCAL DATA ONLY</span>
+          </header>
+          <div class="case-timeline" data-case-timeline>
+            <div class="timeline-zero"><i></i><span><b>19:42</b><small>transfer flagged</small></span></div>
+            <p>The suspicious transfer is loaded. Run the investigation to assemble the rest.</p>
+          </div>
+        </article>
+        <article class="panel artifacts-panel" aria-labelledby="artifacts-title">
+          <header class="panel-head">
+            <div><span class="eyebrow">CASE ARTIFACTS</span><h2 id="artifacts-title">Evidence you can take with you</h2></div>
+            <span class="artifact-count" data-artifact-count>0 FILES</span>
+          </header>
+          <div class="artifact-list" data-artifact-list>
+            <div class="empty-state horizontal"><span>□</span><p><strong>No files yet</strong>Money map, freeze receipt, case report, and handoff will appear here.</p></div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Ringlight, an original WebMCP build by the doom2quake collective.</span>
+      <span>Seeded exercise only. No real accounts, funds, personal data, filings, or notifications.</span>
+    </footer>
+
+    <dialog class="approval-dialog" data-approval-dialog aria-labelledby="approval-title">
+      <form method="dialog" class="approval-card">
+        <div class="gate-header">
+          <span class="gate-icon" aria-hidden="true"><i></i><b>!</b></span>
+          <div><span class="eyebrow">HUMAN CONTROL BOUNDARY</span><h2 id="approval-title" data-approval-title>Freeze 14 linked accounts?</h2></div>
+          <span class="paused-chip">TOOL PAUSED</span>
+        </div>
+        <p class="gate-description" data-approval-description>The browser has prepared a consequential action. Nothing changes until you approve this exact scope.</p>
+        <dl class="approval-scope" data-approval-scope></dl>
+        <div class="gate-visual" aria-hidden="true">
+          <span>M01</span><span>M02</span><span>M03</span><span>M04</span><span>M05</span><span>M06</span><span>M07</span>
+          <i>FREEZE BOUNDARY</i>
+          <span>M08</span><span>M09</span><span>M10</span><span>M11</span><span>M12</span><span>M13</span><span>M14</span>
+        </div>
+        <div class="gate-note"><span>⌁</span><p><strong>You stay in control.</strong> Approval applies once, to this exact request, in this local exercise.</p></div>
+        <div class="approval-actions">
+          <button class="button button-ghost" value="cancel" type="submit" data-deny-approval>Hold action</button>
+          <button class="button button-approve" value="approve" type="submit" data-approve-action><span>✓</span> Approve once</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog class="help-dialog" data-help-dialog aria-labelledby="help-title">
+      <form method="dialog" class="help-card">
+        <button class="dialog-close" value="close" type="submit" aria-label="Close help">×</button>
+        <span class="eyebrow">HOW RINGLIGHT WORKS</span>
+        <h2 id="help-title">The page becomes the tool.</h2>
+        <div class="help-grid">
+          <section><i>01</i><h3>Follow what you can see</h3><p>Ten WebMCP page tools read the same local transfers shown on this money map.</p></section>
+          <section><i>02</i><h3>Keep consequential control</h3><p>Freezing the ring and releasing a bank handoff both pause for an explicit person-approved decision.</p></section>
+          <section><i>03</i><h3>Rewind every move</h3><p>Each call leaves a receipt. The scrubber reconstructs the investigation without freezing or notifying twice.</p></section>
+        </div>
+        <p class="help-note"><kbd>R</kbd> run the bust <kbd>Esc</kbd> close this panel</p>
+      </form>
+    </dialog>
+
+    <dialog class="data-dialog" data-data-dialog aria-labelledby="data-title">
+      <form method="dialog" class="data-card">
+        <button class="dialog-close" value="close" type="button" data-close-data aria-label="Close transfer loader">×</button>
+        <span class="eyebrow">OPTIONAL LOCAL DATA</span>
+        <h2 id="data-title">Load your own transfers</h2>
+        <p>This is secondary to the ready-to-run seeded case. Your file stays in this browser. The same ten page tools will read it, with no upload and no network request.</p>
+        <div class="data-schema">
+          <strong>Required columns</strong>
+          <code>from,to,amount,timestamp</code>
+          <small>Optional: id, status (settled or pending), fromLabel, toLabel, memo</small>
+        </div>
+        <label class="file-picker">
+          <span>Choose a CSV or JSON file</span>
+          <small>JSON can be an array of transfers or an object with a transfers array.</small>
+          <input type="file" accept=".csv,.json,text/csv,application/json" data-transfer-file>
+        </label>
+        <div class="sample-links"><span>Need a file?</span><a href="./samples/payments-loop.csv" download>sample CSV</a><a href="./samples/marketplace-payouts.json" download>sample JSON</a></div>
+        <p class="data-status" data-data-status aria-live="polite">Nothing leaves this page.</p>
+        <p class="data-error" data-data-error role="alert" hidden></p>
+      </form>
+    </dialog>
+
+    <div class="toast-region" data-toast-region aria-live="polite" aria-atomic="true"></div>
+
+    <script>
+      (() => {
+        const runtime = document.createElement("script");
+        runtime.async = false;
+        if (location.protocol === "file:") {
+          runtime.src = "./src/file-runtime.js";
+          runtime.dataset.runtime = "file-compatibility";
+        } else {
+          runtime.type = "module";
+          runtime.src = "./src/main.js";
+          runtime.dataset.runtime = "es-module";
+        }
+        document.body.append(runtime);
+      })();
+    </script>
+  </body>
+</html>
