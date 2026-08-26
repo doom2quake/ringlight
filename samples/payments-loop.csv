@@ -1,0 +1,7 @@
+id,from,to,amount,timestamp,status,fromLabel,toLabel,memo
+pay-001,merchant-104,bridge-a,48000,2026-08-26T14:00:00Z,settled,Merchant 104,Bridge A,Unexpected payout
+pay-002,bridge-a,bridge-b,46500,2026-08-26T14:01:10Z,settled,Bridge A,Bridge B,Rapid onward transfer
+pay-003,bridge-b,bridge-c,45100,2026-08-26T14:02:05Z,settled,Bridge B,Bridge C,Rapid onward transfer
+pay-004,bridge-c,bridge-a,9000,2026-08-26T14:03:12Z,settled,Bridge C,Bridge A,Circular return
+pay-005,bridge-b,payout-crypto,17000,2026-08-26T14:04:20Z,pending,Bridge B,Crypto payout,Pending destination
+pay-006,bridge-c,payout-card,15500,2026-08-26T14:04:42Z,pending,Bridge C,Card payout,Pending destination

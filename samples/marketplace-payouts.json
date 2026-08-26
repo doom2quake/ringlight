@@ -1,0 +1,44 @@
+{
+  "transfers": [
+    {
+      "id": "market-001",
+      "from": "marketplace-22",
+      "to": "seller-a",
+      "amount": 12600,
+      "timestamp": "2026-08-26T16:00:00Z",
+      "status": "settled",
+      "fromLabel": "Marketplace 22",
+      "toLabel": "Seller A"
+    },
+    {
+      "id": "market-002",
+      "from": "marketplace-22",
+      "to": "seller-b",
+      "amount": 11800,
+      "timestamp": "2026-08-26T16:01:00Z",
+      "status": "settled",
+      "fromLabel": "Marketplace 22",
+      "toLabel": "Seller B"
+    },
+    {
+      "id": "market-003",
+      "from": "seller-a",
+      "to": "shared-wallet",
+      "amount": 12000,
+      "timestamp": "2026-08-26T16:02:00Z",
+      "status": "pending",
+      "fromLabel": "Seller A",
+      "toLabel": "Shared Wallet"
+    },
+    {
+      "id": "market-004",
+      "from": "seller-b",
+      "to": "shared-wallet",
+      "amount": 11250,
+      "timestamp": "2026-08-26T16:02:20Z",
+      "status": "pending",
+      "fromLabel": "Seller B",
+      "toLabel": "Shared Wallet"
+    }
+  ]
+}
