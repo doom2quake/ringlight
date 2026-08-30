@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Ringlight"
+type: software
+authors:
+  - family-names: "Sarkar"
+    given-names: "Dipankar"
+date-released: "2026-08-27"
+license: MIT
+repository-code: "https://github.com/doom2quake/ringlight"
